@@ -1016,13 +1016,13 @@
     
     .portfolio-grid {
         margin-left: -.5em;
-        margin-right: -.5em
+        /* margin-right: -.5em */
     }
     
     .portfolio-grid figure {
         width: 25%;
         float: left;
-        padding: .5em
+        /* padding: .5em */
     }
     
     .portfolio-grid img {
@@ -1153,7 +1153,7 @@
     
     .blog-masonry .item {
         width: 50%;
-        float: left;
+        float: right;
         padding: 1em
     }
     
