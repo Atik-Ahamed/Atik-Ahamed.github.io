@@ -20,14 +20,341 @@
 
 
 
-    <!-- This styles needs for demo -->
     <link rel="stylesheet" href="preview/lmpixels-demo-panel.css" type="text/css">
-    <!-- /This styles needs for demo -->
 
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
 
+    <!-- <style>
+        /* --- Layout: Image & Header Blocks --- */
+        .designation-text {
+          margin-top: 64.5%;
+        }
+      
+        .my-photo {
+          margin-left: 6%;
+        }
+      
+        .my-photo .mask {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -230px;
+          right: -20px;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+      
+        p.site-description {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 300;
+          font-family: Oswald, Helvetica, sans-serif;
+          margin: 0;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+      
+        ul.social-links {
+          display: inline-block;
+          list-style: none;
+          margin: 8px 0 0;
+          padding: 0;
+          float: right;
+        }
+      
+        .my-photo-small img {
+          border-radius: 20%;
+        }
+      
+        /* --- Bio Section --- */
+        .bio-paragraph {
+          font-family: 'Inter', sans-serif;
+          font-size: 1rem;
+          color: #2a2a2a;
+          margin-bottom: 2rem;
+          letter-spacing: 0.2px;
+        }
+      
+        .bio-paragraph a {
+          color: #1a73e8;
+          text-decoration: none;
+          font-weight: 500;
+          border-bottom: 1px dotted rgba(26, 115, 232, 0.4);
+          transition: 0.2s;
+        }
+      
+        .bio-paragraph a:hover {
+          color: #0b59d6;
+          border-bottom: 1px solid #0b59d6;
+        }
+      
+        /* --- News Cards --- */
+        .news-card {
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 16px 20px;
+          margin-bottom: 20px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+          background: #fff;
+          animation: fadeInUp 0.6s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+      
+        .news-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+      
+        .news-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          /* margin-bottom: 10px; */
+        }
+      
+        .news-title {
+          font-weight: 600;
+          font-size: 1rem;
+          margin-bottom: 8px;
+          flex: 1;
+        }
+      
+        .news-right {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          /* gap: 8px; */
+        }
+      
+        .date-badge {
+          font-size: 0.85rem;
+          background-color: #e1f3e4;
+          color: #317245;
+          padding: 4px 10px;
+          border-radius: 12px;
+          font-weight: 600;
+        }
+      
+        .accepted-badge {
+          color: #1b5e20;
+          font-weight: 600;
+          font-size: 0.95rem;
+          background-color: #e8f5e9;
+          padding: 4px 10px;
+          border-radius: 6px;
+          display: inline-block;
+        }
+      
+        /* --- Links --- */
+        .news-links a {
+          display: inline-block;
+          margin-right: 10px;
+          padding: 6px 12px;
+          font-size: 0.85rem;
+          border-radius: 4px;
+          text-decoration: none;
+          transition: background 0.3s ease;
+        }
+      
+        .news-links .pdf-link {
+          background-color: #b31b1b;
+          color: #fff;
+        }
+      
+        .news-links .pdf-link:hover {
+          background-color: #a01414;
+        }
+      
+        .news-links .code-link {
+          background-color: #eaeaea;
+          color: #333;
+        }
+      
+        /* --- Animated Facts --- */
+        .news-facts-wrapper {
+          position: relative;
+          width: 240px;
+          height: 24px;
+          overflow: hidden;
+        }
+      
+        .fact-item {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 1rem;
+          font-weight: 500;
+          color: #444;
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        }
+      
+        .news-facts .fact-item:nth-child(1) {
+          animation: fadeCycle 30s infinite;
+          animation-delay: 0s;
+        }
+      
+        .news-facts .fact-item:nth-child(2) {
+          animation: fadeCycle 30s infinite;
+          animation-delay: 10s;
+        }
+      
+        .news-facts .fact-item:nth-child(3) {
+          animation: fadeCycle 30s infinite;
+          animation-delay: 20s;
+        }
+      
+        @keyframes fadeCycle {
+          0% { opacity: 0; }
+          10% { opacity: 1; }
+          30% { opacity: 1; }
+          40% { opacity: 0; }
+          100% { opacity: 0; }
+        }
+      
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .news-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            background: #fff;
+            animation: fadeInUp 0.6s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            font-weight: 600;
+            font-size: 1rem;
+            flex: 1;
+        }
+
+        .date-badge {
+            font-size: 0.85rem;
+            background-color: #e1f3e4;
+            color: #317245;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .news-info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .accepted-text {
+            color: #0f7908;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .news-facts-wrapper {
+            position: relative;
+            width: 260px;
+            height: 24px;
+            overflow: hidden;
+        }
+
+        .fact-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #444;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .news-facts .fact-item:nth-child(1) {
+            animation: fadeCycle 30s infinite;
+            animation-delay: 0s;
+        }
+
+        .news-facts .fact-item:nth-child(2) {
+            animation: fadeCycle 30s infinite;
+            animation-delay: 10s;
+        }
+
+        .news-facts .fact-item:nth-child(3) {
+            animation: fadeCycle 30s infinite;
+            animation-delay: 20s;
+        }
+
+        @keyframes fadeCycle {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            30% { opacity: 1; }
+            40% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .news-links a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .news-links .pdf-link {
+            background-color: #b31b1b;
+            color: #fff;
+        }
+
+        .news-links .pdf-link:hover {
+            background-color: #a01414;
+        }
+
+        .news-links .code-link {
+            background-color: #eaeaea;
+            color: #333;
+        }
+
+        @keyframes fadeInUp {
+            from {
+            opacity: 0;
+            transform: translateY(20px);
+            }
+            to {
+            opacity: 1;
+            transform: translateY(0);
+            }
+        }
+      </style>
+       -->
     <style>
+        /* --- Layout: Image & Header Blocks --- */
         .designation-text {
             margin-top: 64.5%;
         }
@@ -42,7 +369,7 @@
             bottom: 0;
             left: -230px;
             right: -20px;
-            background-color: rgb(0 0 0 / 40%);
+            background-color: rgba(0, 0, 0, 0.4);
         }
 
         p.site-description {
@@ -50,8 +377,8 @@
             font-size: 18px;
             font-weight: 300;
             font-family: Oswald, Helvetica, sans-serif;
-            margin: 0px 0;
-            text-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
+            margin: 0;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
         }
 
         ul.social-links {
@@ -62,12 +389,193 @@
             float: right;
         }
 
-
-
         .my-photo-small img {
             border-radius: 20%;
         }
+
+        /* --- Bio Section --- */
+        .bio-paragraph {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #2a2a2a;
+            margin-bottom: 2rem;
+            letter-spacing: 0.2px;
+        }
+
+        .bio-paragraph a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted rgba(26, 115, 232, 0.4);
+            transition: 0.2s;
+        }
+
+        .bio-paragraph a:hover {
+            color: #0b59d6;
+            border-bottom: 1px solid #0b59d6;
+        }
+
+        /* --- News Cards --- */
+        .news-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            background: #fff;
+            animation: fadeInUp 0.6s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .news-title {
+            font-weight: 600;
+            font-size: 1rem;
+            flex: 1;
+            margin-bottom: 8px;
+        }
+
+        .date-badge {
+            font-size: 0.85rem;
+            background-color: #e1f3e4;
+            color: #317245;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .accepted-badge {
+            color: #1b5e20;
+            font-weight: 600;
+            font-size: 0.95rem;
+            background-color: #e8f5e9;
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .news-info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .accepted-text {
+            color: #0f7908;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .news-facts-wrapper {
+            position: relative;
+            width: 600px;
+            height: 24px;
+            overflow: hidden;
+        }
+
+        .fact-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #141212;
+            font-style: italic;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .news-facts .fact-item:nth-child(1) {
+            animation: fadeCycle 30s infinite;
+            animation-delay: 0s;
+        }
+
+        .news-facts .fact-item:nth-child(2) {
+            animation: fadeCycle 30s infinite;
+            animation-delay: 10s;
+        }
+
+        .news-facts .fact-item:nth-child(3) {
+            animation: fadeCycle 30s infinite;
+            animation-delay: 20s;
+        }
+
+        @keyframes fadeCycle {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Links --- */
+        .news-links a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .news-links .pdf-link {
+            background-color: #b31b1b;
+            color: #fff;
+        }
+
+        .news-links .pdf-link:hover {
+            background-color: #a01414;
+        }
+
+        .news-links .code-link {
+            background-color: #eaeaea;
+            color: #333;
+        }
     </style>
+
+
 </head>
 
 <body>
@@ -162,33 +670,40 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-12 col-md-12 mobile-visible subpage-block">
+                            <div class="col-sm-13 col-md-13 mobile-visible subpage-block">
                                 <div class="my-photo-small">
                                     <img src="images/photo_small.jpg" alt="image">
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-12 subpage-block">
+                            <div class="col-sm-13 col-md-13 subpage-block">
                                 <div class="general-info">
-                                    <p>I am currently pursuing PhD in Computer Science at the <a target="_blank"
-                                            href="https://www.uky.edu" style="color: blue;"><b>University of
-                                                Kentucky</b></a>, where I am privileged to explore the exciting realm of
-                                        machine learning.
+                                    <p class="bio-paragraph">
+                                        I’m a PhD student in Computer Science at the
+                                        <a target="_blank" href="https://www.uky.edu" style="color: blue;"><b>University
+                                                of Kentucky</b></a>,
+                                        where I work at the intersection of deep learning, multimodal learning, and
+                                        real-world data challenges.
                                         My <a target="_blank"
                                             href="https://scholar.google.com/citations?user=L9epoWcAAAAJ&hl=en"
-                                            title="Scholar"> <b>research</b> </a> interests revolve around advancing
-                                        foundational models to accommodate diverse data,
-                                        with the goal of driving innovation in various domains.
-                                        I completed my BSc in Computer Science and Engineering from <a target="_blank"
-                                            href="https://www.ruet.ac.bd/" style="color: #e6b029;"><b>RUET</b></a>.
-                                        Previously, I served as a lecturer at <a target="_blank"
-                                            href="https://green.edu.bd/" style="color: green;"><b>Green University of
-                                                Bangladesh</b></a>.
-                                        I am also a Kaggle <a target="_blank"
-                                            href="https://www.kaggle.com/atikahamed/competitions"
-                                            style="color: #96508e;font-family:Noto Sans, sans-serif"><b>Competition
-                                                Expert</b></a>, having actively participated in various competitions.
-                                        I am eager to explore and collaborate on exciting ideas.
+                                            title="Scholar"><b>research</b></a>
+                                        focuses on building effective and efficient AI solutions that can adapt to
+                                        diverse domains.
+                                        I earned my BSc in Computer Science and Engineering from
+                                        <a target="_blank" href="https://www.ruet.ac.bd/"
+                                            style="color: #e6b029;"><b>RUET</b></a>
+                                        and previously served as a lecturer at
+                                        <a target="_blank" href="https://green.edu.bd/" style="color: green;"><b>Green
+                                                University of Bangladesh</b></a>. As a Kaggle
+                                        <a target="_blank" href="https://www.kaggle.com/atikahamed/competitions"
+                                            style="color: #96508e; font-family:Noto Sans, sans-serif;"><b>Competition
+                                                Expert</b></a>,
+                                        I enjoy solving practical machine learning problems and learning from the global
+                                        data science community.
+                                        I’m interested in new ideas and exciting collaborations!
                                     </p>
+
+
+
                                 </div>
                             </div>
 
@@ -197,47 +712,103 @@
                         </div>
 
 
-                        <!-- Fun facts block -->
-                        <!-- <div class="block-title">
-                            <h3>Measures</h3>
-                        </div> -->
+
                         <div class="row">
-                            <h3 class="text-decoration-underline">RECENT NEWS</h3>
-                            <ul>
+                            <h3 class="text-decoration-underline mb-4">RECENT NEWS</h3>
 
-                                <li>
-                                    <p><span class="badge alert-success">Feb, 2025</span> <b>GraphMinNet: Learning Dependencies in Graphs with Light Complexity Minimal Architecture</b> is available on <a target="_blank" href="https://scholar.google.com/scholar_lookup?arxiv_id=2502.00282">arXiv</a></p>
-                                </li>
-                                <li>
-                                    <p><span class="badge alert-success">Feb, 2025</span> <b>CausalGeD: Blending Causality and Diffusion for Spatial Gene Expression Generation</b> is available on <a target="_blank" href="https://arxiv.org/abs/2502.07751">arXiv</a></p>
-                                </li>
-                                <li>
-                                    <p><span class="badge alert-success">July, 2024</span> <b>TimeMachine: A Time
-                                            Series is Worth 4 Mambas for Long-term Forecasting</b> is accepted at <a target="_blank" href="https://ebooks.iospress.nl/doi/10.3233/FAIA240677">ECAI, 2024</a></p>
-                                </li>
-                                <li>
-                                    <p><span class="badge alert-success">June, 2024</span> <b>TSCMamba: Mamba Meets Multi-View Learning for Time Series Classification</b> is available on <a
-                                        target="_blank" href="https://scholar.google.com/scholar_lookup?arxiv_id=2406.04419"
-                                        style="color: #c23a11;">arXiv</a></p>
-                                </li>
-                                <li>
-                                    <p><span class="badge alert-success">May, 2024</span> <b>MambaTab: A Plug-and-Play
-                                            Model for Learning Tabular Data</b> is accepted at IEEE 7th International
-                                        Conference on Multimedia Information Processing and Retrieval (<a target="_blank" href="https://sites.google.com/view/mipr2024">MIPR 2024</a>) (<a
-                                        target="_blank" href="https://arxiv.org/abs/2401.08867"
-                                        style="color: #c23a11;">Pre-print</a>)</p>
-                                </li>
-                                
-                                <li>
-                                    <p><span class="badge alert-success">April, 2023</span><b> FFCL:
-                                            Forward-Forward Contrastive Learning for Improved
-                                            Medical Image Classification</b> accepted at <a
-                                            href="https://openreview.net/pdf?id=tfEylAl8vf" target="_blank"
-                                            style="color: rgb(228, 194, 45);">MIDL 2023</a></p>
+                            <div class="news-card">
+                                <div class="news-header">
+                                    <div class="news-title">
+                                        CausalGeD: Blending Causality and Diffusion for Spatial Gene Expression Generation
+                                    </div>
+                                    <span class="date-badge">May 2025</span>
+                                </div>
 
-                                </li>
-                            </ul>
+                                <div class="news-info-row">
+                                    <p class="accepted-text"> Accepted at KDD 2025! (Acceptance rate &lt; 19%)</p>
+                                    <div class="news-facts-wrapper">
+                                        <div class="news-facts">
+                                            <span class="fact-item">Novel blending of diffusion and AR in Spatial Transcriptomics.</span>
+                                            <span class="fact-item">Long-range dependencies in gene expression.</span>
+                                            <span class="fact-item">Achieves SOTA results on 10 datasets.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="news-links">
+                                    <a href="https://arxiv.org/abs/2502.07751" target="_blank" class="pdf-link">📄
+                                        Preprint</a>
+                                    <a href="#" class="code-link" style="cursor: not-allowed;">💻 Code (coming soon)</a>
+                                </div>
+                            </div>
+
+
+                            <div class="news-card">
+                                <div class="news-header">
+                                    <div class="news-title">
+                                        TSCMamba: Mamba meets multi-view learning for time series classification
+                                    </div>
+                                    <span class="date-badge">March 2025</span>
+                                </div>
+
+                                <div class="news-info-row">
+                                    <p class="accepted-text"> Accepted at Information Fusion! (Impact Factor 14+)</p>
+                                    <div class="news-facts-wrapper">
+                                        <div class="news-facts">
+                                            <span class="fact-item">Robust time-series classification using multi-view learning..</span>
+                                            <span class="fact-item">Temporal and spectral features for shift-equivariance.</span>
+                                            <span class="fact-item">Superior accuracy and efficiency over 30 benchmark datasets.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="news-links">
+                                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S1566253525001526"
+                                        target="_blank" class="pdf-link">📄 Paper</a>
+                                    <a href="https://github.com/Atik-Ahamed/TSCMamba" class="code-link"
+                                        target="_blank">💻 Code</a>
+
+                                </div>
+                            </div>
+
+
+
+
+                           
+
+
+
+                            <div class="news-card">
+                                <div class="news-header">
+                                    <div class="news-title">GraphMinNet: Learning Dependencies in Graphs with Light
+                                        Complexity Minimal Architecture</div>
+                                    <span class="date-badge">Feb 2025</span>
+                                </div>
+                                <p class="mb-2">Now available on arXiv.</p>
+                                <div class="news-links">
+                                    <a href="https://arxiv.org/abs/2502.00282" target="_blank" class="pdf-link">📄
+                                        PDF</a>
+                                    <a href="#" class="code-link">💻 Code (coming soon)</a>
+                                </div>
+                            </div>
+
+
+
+                            <div class="news-card">
+                                <div class="news-header">
+                                    <div class="news-title">TimeMachine: A Time Series is Worth 4 Mambas for Long-term
+                                        Forecasting</div>
+                                    <span class="date-badge">July 2024</span>
+                                </div>
+                                <p class="mb-2">Accepted at ECAI 2024.</p>
+                                <div class="news-links">
+                                    <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA240677" target="_blank"
+                                        class="pdf-link">📄 PDF</a>
+                                    <a href="#" class="code-link">💻 Code (coming soon)</a>
+                                </div>
+                            </div>
                         </div>
+
 
 
                     </section>
