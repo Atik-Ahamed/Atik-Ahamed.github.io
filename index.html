@@ -25,334 +25,7 @@
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
 
-    <!-- <style>
-        /* --- Layout: Image & Header Blocks --- */
-        .designation-text {
-          margin-top: 64.5%;
-        }
-      
-        .my-photo {
-          margin-left: 6%;
-        }
-      
-        .my-photo .mask {
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: -230px;
-          right: -20px;
-          background-color: rgba(0, 0, 0, 0.4);
-        }
-      
-        p.site-description {
-          color: #fff;
-          font-size: 18px;
-          font-weight: 300;
-          font-family: Oswald, Helvetica, sans-serif;
-          margin: 0;
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-        }
-      
-        ul.social-links {
-          display: inline-block;
-          list-style: none;
-          margin: 8px 0 0;
-          padding: 0;
-          float: right;
-        }
-      
-        .my-photo-small img {
-          border-radius: 20%;
-        }
-      
-        /* --- Bio Section --- */
-        .bio-paragraph {
-          font-family: 'Inter', sans-serif;
-          font-size: 1rem;
-          color: #2a2a2a;
-          margin-bottom: 2rem;
-          letter-spacing: 0.2px;
-        }
-      
-        .bio-paragraph a {
-          color: #1a73e8;
-          text-decoration: none;
-          font-weight: 500;
-          border-bottom: 1px dotted rgba(26, 115, 232, 0.4);
-          transition: 0.2s;
-        }
-      
-        .bio-paragraph a:hover {
-          color: #0b59d6;
-          border-bottom: 1px solid #0b59d6;
-        }
-      
-        /* --- News Cards --- */
-        .news-card {
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          padding: 16px 20px;
-          margin-bottom: 20px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-          background: #fff;
-          animation: fadeInUp 0.6s ease;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-      
-        .news-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-        }
-      
-        .news-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          /* margin-bottom: 10px; */
-        }
-      
-        .news-title {
-          font-weight: 600;
-          font-size: 1rem;
-          margin-bottom: 8px;
-          flex: 1;
-        }
-      
-        .news-right {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          /* gap: 8px; */
-        }
-      
-        .date-badge {
-          font-size: 0.85rem;
-          background-color: #e1f3e4;
-          color: #317245;
-          padding: 4px 10px;
-          border-radius: 12px;
-          font-weight: 600;
-        }
-      
-        .accepted-badge {
-          color: #1b5e20;
-          font-weight: 600;
-          font-size: 0.95rem;
-          background-color: #e8f5e9;
-          padding: 4px 10px;
-          border-radius: 6px;
-          display: inline-block;
-        }
-      
-        /* --- Links --- */
-        .news-links a {
-          display: inline-block;
-          margin-right: 10px;
-          padding: 6px 12px;
-          font-size: 0.85rem;
-          border-radius: 4px;
-          text-decoration: none;
-          transition: background 0.3s ease;
-        }
-      
-        .news-links .pdf-link {
-          background-color: #b31b1b;
-          color: #fff;
-        }
-      
-        .news-links .pdf-link:hover {
-          background-color: #a01414;
-        }
-      
-        .news-links .code-link {
-          background-color: #eaeaea;
-          color: #333;
-        }
-      
-        /* --- Animated Facts --- */
-        .news-facts-wrapper {
-          position: relative;
-          width: 240px;
-          height: 24px;
-          overflow: hidden;
-        }
-      
-        .fact-item {
-          position: absolute;
-          top: 0;
-          left: 0;
-          font-size: 1rem;
-          font-weight: 500;
-          color: #444;
-          opacity: 0;
-          transition: opacity 1s ease-in-out;
-        }
-      
-        .news-facts .fact-item:nth-child(1) {
-          animation: fadeCycle 30s infinite;
-          animation-delay: 0s;
-        }
-      
-        .news-facts .fact-item:nth-child(2) {
-          animation: fadeCycle 30s infinite;
-          animation-delay: 10s;
-        }
-      
-        .news-facts .fact-item:nth-child(3) {
-          animation: fadeCycle 30s infinite;
-          animation-delay: 20s;
-        }
-      
-        @keyframes fadeCycle {
-          0% { opacity: 0; }
-          10% { opacity: 1; }
-          30% { opacity: 1; }
-          40% { opacity: 0; }
-          100% { opacity: 0; }
-        }
-      
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .news-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-            background: #fff;
-            animation: fadeInUp 0.6s ease;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .news-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .news-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .news-title {
-            font-weight: 600;
-            font-size: 1rem;
-            flex: 1;
-        }
-
-        .date-badge {
-            font-size: 0.85rem;
-            background-color: #e1f3e4;
-            color: #317245;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .news-info-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 10px;
-        }
-
-        .accepted-text {
-            color: #0f7908;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        .news-facts-wrapper {
-            position: relative;
-            width: 260px;
-            height: 24px;
-            overflow: hidden;
-        }
-
-        .fact-item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #444;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .news-facts .fact-item:nth-child(1) {
-            animation: fadeCycle 30s infinite;
-            animation-delay: 0s;
-        }
-
-        .news-facts .fact-item:nth-child(2) {
-            animation: fadeCycle 30s infinite;
-            animation-delay: 10s;
-        }
-
-        .news-facts .fact-item:nth-child(3) {
-            animation: fadeCycle 30s infinite;
-            animation-delay: 20s;
-        }
-
-        @keyframes fadeCycle {
-            0% { opacity: 0; }
-            10% { opacity: 1; }
-            30% { opacity: 1; }
-            40% { opacity: 0; }
-            100% { opacity: 0; }
-        }
-
-        .news-links a {
-            display: inline-block;
-            margin-right: 10px;
-            padding: 6px 12px;
-            font-size: 0.85rem;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-
-        .news-links .pdf-link {
-            background-color: #b31b1b;
-            color: #fff;
-        }
-
-        .news-links .pdf-link:hover {
-            background-color: #a01414;
-        }
-
-        .news-links .code-link {
-            background-color: #eaeaea;
-            color: #333;
-        }
-
-        @keyframes fadeInUp {
-            from {
-            opacity: 0;
-            transform: translateY(20px);
-            }
-            to {
-            opacity: 1;
-            transform: translateY(0);
-            }
-        }
-      </style>
-       -->
+  
     <style>
         /* --- Layout: Image & Header Blocks --- */
         .designation-text {
@@ -736,8 +409,7 @@
                                 </div>
 
                                 <div class="news-links">
-                                    <a href="https://arxiv.org/abs/2502.07751" target="_blank" class="pdf-link">📄
-                                        Preprint</a>
+                                    <a href="https://arxiv.org/abs/2502.07751" target="_blank" class="pdf-link">📄Preprint</a>
                                     <a href="#" class="code-link" style="cursor: not-allowed;">💻 Code (coming soon)</a>
                                 </div>
                             </div>
@@ -755,7 +427,7 @@
                                     <p class="accepted-text"> Accepted at Information Fusion! (Impact Factor 14+)</p>
                                     <div class="news-facts-wrapper">
                                         <div class="news-facts">
-                                            <span class="fact-item">Robust time-series classification using multi-view learning..</span>
+                                            <span class="fact-item">Robust time-series classification using multi-view learning.</span>
                                             <span class="fact-item">Temporal and spectral features for shift-equivariance.</span>
                                             <span class="fact-item">Superior accuracy and efficiency over 30 benchmark datasets.</span>
                                         </div>
@@ -765,12 +437,77 @@
                                 <div class="news-links">
                                     <a href="https://www.sciencedirect.com/science/article/abs/pii/S1566253525001526"
                                         target="_blank" class="pdf-link">📄 Paper</a>
-                                    <a href="https://github.com/Atik-Ahamed/TSCMamba" class="code-link"
-                                        target="_blank">💻 Code</a>
+                                    <a href="https://github.com/Atik-Ahamed/TSCMamba" class="code-link" target="_blank">💻 Code</a>
 
                                 </div>
                             </div>
 
+                            <div class="news-card">
+                                <div class="news-header">
+                                    <div class="news-title">
+                                        Mol-CADiff: Causality-Aware Autoregressive Diffusion for Molecule Generation
+                                    </div>
+                                    <span class="date-badge">March 2025</span>
+                                </div>
+
+                                <div class="news-info-row">
+                                    <p class="accepted-text"> Preprint available at arXiv</p>
+                                   
+                                </div>
+
+                                <div class="news-links">
+                                    <a href="https://arxiv.org/abs/2503.05499" target="_blank" class="pdf-link">📄 Paper</a>
+                                    <a href="#" class="code-link" style="cursor: not-allowed;">💻 Code (coming soon)</a>
+
+                                </div>
+                            </div>
+
+
+                            <div class="news-card">
+                                <div class="news-header">
+                                    <div class="news-title">
+                                        GraphMinNet: Learning Dependencies in Graphs with Light Complexity Minimal Architecture
+                                    </div>
+                                    <span class="date-badge">February 2025</span>
+                                </div>
+
+                                <div class="news-info-row">
+                                    <p class="accepted-text"> Preprint available at arXiv</p>
+                                
+                                </div>
+
+                                <div class="news-links">
+                                    <a href="https://arxiv.org/abs/2502.00282" target="_blank" class="pdf-link">📄 Paper</a>
+                                    <a href="#" class="code-link" style="cursor: not-allowed;">💻 Code (coming soon)</a>
+
+                                </div>
+                            </div>
+
+                            <div class="news-card">
+                                <div class="news-header">
+                                    <div class="news-title">
+                                        Low-dose computed tomography perceptual image quality assessment
+                                    </div>
+                                    <span class="date-badge">January 2025</span>
+                                </div>
+
+                                <div class="news-info-row">
+                                    <p class="accepted-text"> Accepted at Medical Image Analysis! (Impact Factor 10+)</p>
+                                    <div class="news-facts-wrapper">
+                                        <div class="news-facts">
+                                            <span class="fact-item">First low-dose CT IQA challenge.</span>
+                                            <span class="fact-item">First open-source low-dose CT IQA dataset.</span>
+                                            <span class="fact-item">Potential of no-reference IQA methods.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="news-links">
+                                    <a href="https://www.sciencedirect.com/science/article/pii/S1361841524002688" target="_blank" class="pdf-link">📄 Paper</a>
+                                    <a href="https://github.com/Ewha-AI/LDCTIQAC2023" class="code-link" target="_blank">💻 Code</a>
+
+                                </div>
+                            </div>
 
 
 
@@ -778,36 +515,7 @@
 
 
 
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">GraphMinNet: Learning Dependencies in Graphs with Light
-                                        Complexity Minimal Architecture</div>
-                                    <span class="date-badge">Feb 2025</span>
-                                </div>
-                                <p class="mb-2">Now available on arXiv.</p>
-                                <div class="news-links">
-                                    <a href="https://arxiv.org/abs/2502.00282" target="_blank" class="pdf-link">📄
-                                        PDF</a>
-                                    <a href="#" class="code-link">💻 Code (coming soon)</a>
-                                </div>
-                            </div>
-
-
-
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">TimeMachine: A Time Series is Worth 4 Mambas for Long-term
-                                        Forecasting</div>
-                                    <span class="date-badge">July 2024</span>
-                                </div>
-                                <p class="mb-2">Accepted at ECAI 2024.</p>
-                                <div class="news-links">
-                                    <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA240677" target="_blank"
-                                        class="pdf-link">📄 PDF</a>
-                                    <a href="#" class="code-link">💻 Code (coming soon)</a>
-                                </div>
-                            </div>
-                        </div>
+                           
 
 
 
