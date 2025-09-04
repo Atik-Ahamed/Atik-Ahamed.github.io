@@ -27,6 +27,14 @@
 
   
     <style>
+        #photoCarousel,
+        #photoCarousel .carousel-inner,
+        #photoCarousel .carousel-item,
+        #photoCarousel img {
+            height: 100vh;       /* Full viewport height */
+            width: 100%;         /* Full width */
+            object-fit: cover;   /* Crop images neatly, no white gaps */
+        }
         /* --- Layout: Image & Header Blocks --- */
         .designation-text {
             margin-top: 64.5%;
@@ -264,20 +272,38 @@
     <div id="page" class="page">
         <!-- Header -->
         <header id="site_header" class="header">
-            <div class="my-photo">
-                <img src="main_photo.jpg" alt="image">
-                <div class="mask"></div>
+            <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+              <div class="carousel-inner">
+                <!-- First slide -->
+                <div class="carousel-item active">
+                  <img src="uky_photo.jpg" class="d-block w-100" alt="Main Photo">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3 style="color:blue;">Md Atik Ahamed</h3>
+                    <h3 style="color:blue;">PhD Candidate, Computer Science, UKY</h3>
+                  </div>
+                </div>
+          
+                <!-- Second slide -->
+                <div class="carousel-item">
+                  <img src="nairr_meeting.jpg" class="d-block w-100" alt="Photo 2">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3 style="color: white">NAIRR Pilot</h3>
+                    <h3 style="color:white;">Inaugural Annual Meeting, 2025</h3>
+                  </div>
+                </div>
+          
+                <!-- Third slide -->
+                <div class="carousel-item">
+                  <img src="ECAI_24.jpg" class="d-block w-100" alt="Photo 3">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3 style="color:white;">ECAI, 24</h3>
+                    <h3 style="color:white;">Santiago de Compostela, Spain</h3>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div class="site-title-block">
-
-
-            </div>
-
-            <a class="menu-toggle mobile-visible">
-                <i class="fa fa-bars"></i>
-            </a>
-        </header>
+          </header>
+          
         <!-- /Header -->
 
         <!-- Main Content -->
@@ -351,16 +377,21 @@
                             <div class="col-sm-13 col-md-13 subpage-block">
                                 <div class="general-info">
                                     <p class="bio-paragraph">
-                                        I’m a PhD student in Computer Science at the
+                                        I’m a PhD Candidate in Computer Science at the
                                         <a target="_blank" href="https://www.uky.edu" style="color: blue;"><b>University
-                                                of Kentucky</b></a>,
-                                        where I work at the intersection of deep learning, multimodal learning, and
-                                        real-world data challenges.
+                                                of Kentucky</b></a> and also a research intern at  <span style="font-weight:bold; font-family:Arial, sans-serif;">
+                                                    <span style="color:#4285F4;">G</span>
+                                                    <span style="color:#EA4335;">o</span>
+                                                    <span style="color:#FBBC05;">o</span>
+                                                    <span style="color:#4285F4;">g</span>
+                                                    <span style="color:#34A853;">l</span>
+                                                    <span style="color:#EA4335;">e</span>
+                                                </span>. 
+                                        I work at the intersection of deep learning, multimodal learning, and real-world data challenges.
                                         My <a target="_blank"
                                             href="https://scholar.google.com/citations?user=L9epoWcAAAAJ&hl=en"
                                             title="Scholar"><b>research</b></a>
-                                        focuses on building effective and efficient AI solutions that can adapt to
-                                        diverse domains.
+                                        focuses on building effective and efficient AI solutions that can adapt to diverse domains.
                                         I earned my BSc in Computer Science and Engineering from
                                         <a target="_blank" href="https://www.ruet.ac.bd/"
                                             style="color: #e6b029;"><b>RUET</b></a>
@@ -370,10 +401,11 @@
                                         <a target="_blank" href="https://www.kaggle.com/atikahamed/competitions"
                                             style="color: #96508e; font-family:Noto Sans, sans-serif;"><b>Competition
                                                 Expert</b></a>,
-                                        I enjoy solving practical machine learning problems and learning from the global
+                                        I also enjoy solving practical machine learning problems and learning from the global
                                         data science community.
                                         I’m interested in new ideas and exciting collaborations!
                                     </p>
+                                    
 
 
 
