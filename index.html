@@ -1,770 +1,294 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Md Atik Ahamed</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Md Atik Ahamed" />
-    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Sunshine, portfolio" />
-    <meta name="author" content="lmtheme" />
-
-    <link rel="stylesheet" href="bootstrap-5.1.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/transition-animations.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-
-
-
-    <link rel="stylesheet" href="preview/lmpixels-demo-panel.css" type="text/css">
-
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-
-  
-    <style>
-        #photoCarousel,
-        #photoCarousel .carousel-inner,
-        #photoCarousel .carousel-item,
-        #photoCarousel img {
-            height: 100vh;       /* Full viewport height */
-            width: 100%;         /* Full width */
-            object-fit: cover;   /* Crop images neatly, no white gaps */
-        }
-        /* --- Layout: Image & Header Blocks --- */
-        .designation-text {
-            margin-top: 64.5%;
-        }
-
-        .my-photo {
-            margin-left: 6%;
-        }
-
-        .my-photo .mask {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: -230px;
-            right: -20px;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        p.site-description {
-            color: #fff;
-            font-size: 18px;
-            font-weight: 300;
-            font-family: Oswald, Helvetica, sans-serif;
-            margin: 0;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-        }
-
-        ul.social-links {
-            display: inline-block;
-            list-style: none;
-            margin: 8px 0 0;
-            padding: 0;
-            float: right;
-        }
-
-        .my-photo-small img {
-            border-radius: 20%;
-        }
-
-        /* --- Bio Section --- */
-        .bio-paragraph {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            color: #2a2a2a;
-            margin-bottom: 2rem;
-            letter-spacing: 0.2px;
-        }
-
-        .bio-paragraph a {
-            color: #1a73e8;
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px dotted rgba(26, 115, 232, 0.4);
-            transition: 0.2s;
-        }
-
-        .bio-paragraph a:hover {
-            color: #0b59d6;
-            border-bottom: 1px solid #0b59d6;
-        }
-
-        /* --- News Cards --- */
-        .news-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-            background: #fff;
-            animation: fadeInUp 0.6s ease;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .news-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .news-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        .news-title {
-            font-weight: 600;
-            font-size: 1rem;
-            flex: 1;
-            margin-bottom: 8px;
-        }
-
-        .date-badge {
-            font-size: 0.85rem;
-            background-color: #e1f3e4;
-            color: #317245;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .accepted-badge {
-            color: #1b5e20;
-            font-weight: 600;
-            font-size: 0.95rem;
-            background-color: #e8f5e9;
-            padding: 4px 10px;
-            border-radius: 6px;
-            display: inline-block;
-        }
-
-        .news-info-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 10px;
-        }
-
-        .accepted-text {
-            color: #0f7908;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        .news-facts-wrapper {
-            position: relative;
-            width: 600px;
-            height: 24px;
-            overflow: hidden;
-        }
-
-        .fact-item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #141212;
-            font-style: italic;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .news-facts .fact-item:nth-child(1) {
-            animation: fadeCycle 30s infinite;
-            animation-delay: 0s;
-        }
-
-        .news-facts .fact-item:nth-child(2) {
-            animation: fadeCycle 30s infinite;
-            animation-delay: 10s;
-        }
-
-        .news-facts .fact-item:nth-child(3) {
-            animation: fadeCycle 30s infinite;
-            animation-delay: 20s;
-        }
-
-        @keyframes fadeCycle {
-            0% {
-                opacity: 0;
-            }
-
-            10% {
-                opacity: 1;
-            }
-
-            30% {
-                opacity: 1;
-            }
-
-            40% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* --- Links --- */
-        .news-links a {
-            display: inline-block;
-            margin-right: 10px;
-            padding: 6px 12px;
-            font-size: 0.85rem;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-
-        .news-links .pdf-link {
-            background-color: #b31b1b;
-            color: #fff;
-        }
-
-        .news-links .pdf-link:hover {
-            background-color: #a01414;
-        }
-
-        .news-links .code-link {
-            background-color: #eaeaea;
-            color: #333;
-        }
-        @media (max-width: 768px) {
-            #photoCarousel {
-                display: none !important;
-            }
-        }
-       
-    </style>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Atik Ahamed - Portfolio</title>
+    <meta name="description" content="Md Atik Ahamed, PhD Candidate in Computer Science at University of Kentucky. Focus on deep learning, multimodal learning, and real-world data challenges.">
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <!-- Loading animation -->
-    <div class="preloader">
-        <div class="preloader-animation">
-            <div class="dot1"></div>
-            <div class="dot2"></div>
+    <header>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="https://drive.google.com/file/d/1ndTxuDFGTswgg7R-Frqi2t540qNXM_kg/view?usp=sharing" target="_blank">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </div>
-    <!-- /Loading animation -->
-
-    <div id="page" class="page">
-        <!-- Header -->
-        <header id="site_header" class="header">
-            <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-              <div class="carousel-inner">
-                <!-- First slide -->
-                <div class="carousel-item active">
-                  <img src="uky_photo.jpg" class="d-block w-100" alt="Main Photo">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3 style="color:blue;">Md Atik Ahamed</h3>
-                    <h3 style="color:blue;">PhD Candidate, Computer Science, UKY</h3>
-                  </div>
-                </div>
-          
-                <!-- Second slide -->
-                <div class="carousel-item">
-                  <img src="nairr_meeting.jpg" class="d-block w-100" alt="Photo 2">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3 style="color: white">NAIRR Pilot</h3>
-                    <h3 style="color:white;">Inaugural Annual Meeting, 2025</h3>
-                  </div>
-                </div>
-          
-                <!-- Third slide -->
-                <div class="carousel-item">
-                  <img src="ECAI_24.jpg" class="d-block w-100" alt="Photo 3">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3 style="color:white;">ECAI, 24</h3>
-                    <h3 style="color:white;">Santiago de Compostela, Spain</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </header>
-          
-        <!-- /Header -->
-
-        <!-- Main Content -->
-        <div id="main" class="site-main">
-            <!-- Page changer wrapper -->
-            <div class="pt-wrapper">
-                <!-- Navigation & Social buttons -->
-                <div class="site-nav mobile-menu-hide">
-                    <!-- Main menu -->
-                    <ul id="nav" class="site-main-menu">
-                        <!-- About Me Subpage link -->
-                        <li>
-                            <a class="pt-trigger" href="#about_me" data-animation="58" data-goto="1">About me</a>
-                            <!-- href value = data-id without # of .pt-page -->
-                        </li>
-                        <!-- /About Me Subpage link -->
-                        <li>
-                            <a href="https://drive.google.com/file/d/1ndTxuDFGTswgg7R-Frqi2t540qNXM_kg/view?usp=sharing"
-                                _target="blank">CV</a>
-                        </li>
-
-                        <li>
-                            <a class="pt-trigger" href="#contact" data-animation="61" data-goto="2">Contact</a>
-                        </li>
-                    </ul>
-                    <!-- /Main menu -->
-                    <ul class="social-links">
-
-                        <li><a class="tip social-button" target="_blank"
-                                href="https://www.linkedin.com/in/md-atik-ahamed-264401162/" title="LinkedIn"><img
-                                    src="linkedin.ico">
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a class="tip social-button" target="_blank" href="https://github.com/Atik-Ahamed"
-                                title="Github">
-                                <img src="github.ico"></a>
-                        </li>
-
-
-
-                        <li>
-                            <a class="tip social-button" target="_blank"
-                                href="https://scholar.google.com/citations?user=L9epoWcAAAAJ&hl=en" title="Scholar">
-                                <img src="scholar.ico">
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </div>
-                <!-- Navigation & Social buttons -->
-
-                <!-- Subpages -->
-                <div class="subpages">
-                    <!-- About Me Subpage -->
-                    <section class="pt-page pt-page-1" data-id="about_me">
-                        <div class="section-title-block">
-
-                            <!-- <h5 class="section-description">Life Long Learner</h5> -->
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-13 col-md-13 mobile-visible subpage-block">
-                                <div class="my-photo-small">
-                                    <img src="images/photo_small.jpg" alt="image">
-                                </div>
-                            </div>
-                            <div class="col-sm-13 col-md-13 subpage-block">
-                                <div class="general-info">
-                                    <p class="bio-paragraph">
-                                        I’m a PhD Candidate in Computer Science at the
-                                        <a target="_blank" href="https://www.uky.edu" style="color: blue;"><b>University
-                                                of Kentucky</b></a> and also a student researcher (intern) at  <span style="font-weight:bold; font-family:Arial, sans-serif;">
-                                                    <span style="color:#4285F4;">G</span>
-                                                    <span style="color:#EA4335;">o</span>
-                                                    <span style="color:#FBBC05;">o</span>
-                                                    <span style="color:#4285F4;">g</span>
-                                                    <span style="color:#34A853;">l</span>
-                                                    <span style="color:#EA4335;">e</span></span>. I work at the intersection of deep learning, multimodal learning, and real-world data challenges.
-                                        My <a target="_blank"
-                                            href="https://scholar.google.com/citations?user=L9epoWcAAAAJ&hl=en"
-                                            title="Scholar"><b>research</b></a>
-                                        focuses on building effective and efficient AI solutions that can adapt to diverse domains.
-                                        I earned my BSc in Computer Science and Engineering from
-                                        <a target="_blank" href="https://www.ruet.ac.bd/"
-                                            style="color: #e6b029;"><b>RUET</b></a>
-                                        and previously served as a lecturer at
-                                        <a target="_blank" href="https://green.edu.bd/" style="color: green;"><b>Green
-                                                University of Bangladesh</b></a>. As a Kaggle
-                                        <a target="_blank" href="https://www.kaggle.com/atikahamed/competitions"
-                                            style="color: #96508e; font-family:Noto Sans, sans-serif;"><b>Competition
-                                                Expert</b></a>,
-                                        I also enjoy solving practical machine learning problems and learning from the global
-                                        data science community.
-                                        I’m interested in new ideas and exciting collaborations!<br><br>
-                                        
-                                    </p>
-                                    
-
-
-
-                                </div>
-                            </div>
-
-
-
-                        </div>
-
-
-
-                        <div class="row">
-                            <h3 class="text-decoration-underline mb-4">RECENT NEWS</h3>
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">
-                                        TFRBench: A Reasoning Benchmark for Evaluating Forecasting Systems
-                                    </div>
-                                    <span class="date-badge">May 2026</span>
-                                </div>
-
-                                <div class="news-info-row">
-                                    <p class="accepted-text"> ICML 2026! </p>
-                                    <div class="news-facts-wrapper">
-                                        <div class="news-facts">
-                                            <span class="fact-item">1st reasoning benchmark for time-series forecasting.</span>
-                                            <span class="fact-item">Performance improved from 40.2% → 56.6%.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-links">
-                                    <a href="https://arxiv.org/abs/2604.05364" target="_blank" class="pdf-link">📄arXiv version</a>
-                                    <a href="https://tfrbench.github.io/" class="code-link" target="_blank">💻 Leaderboard </a>
-                                </div>
-                                
-
-                                
-                            </div>
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">
-                                        RefiDiff: Progressive Refinement Diffusion for Efficient Missing Data Imputation
-                                    </div>
-                                    <span class="date-badge">Nov 2025</span>
-                                </div>
-
-                                <div class="news-info-row">
-                                    <p class="accepted-text"> AAAI 2026! (Acceptance rate for year 2026 &lt; 18%)</p>
-                                    <div class="news-facts-wrapper">
-                                        <div class="news-facts">
-                                            <span class="fact-item">Unifies predictive and generative paradigms for robust and flexible imputation.</span>
-                                            <span class="fact-item">Novel Mamba-based denoising model for capturing long-range dependencies efficiently in highdimensional, mixed-type tabular data.</span>
-                                            <span class="fact-item">Achieves state-of-the-art performance under MCAR, MAR, and MNAR settings, with notable gains in MNAR scenarios.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-links">
-                                    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/39034" target="_blank" class="pdf-link">📄Paper</a>
-                                    <a href="https://github.com/Atik-Ahamed/RefiDiff" class="code-link" target="_blank">💻 Code </a>
-                                </div>
-                                
-
-                                
-                            </div>
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">
-                                        Selected to participate in the Meta PhD Forum, 2025
-                                    </div>
-                                    <span class="date-badge">Oct 2025</span>
-                                </div>
-
-                                <div class="news-info-row">
-                                    <p class="accepted-text"> (sponsored by Meta) </p>
-
-                                </div>
-                                <div class="news-links">
-                                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7390221227384254464/" target="_blank" class="pdf-link">📄Post</a>
-                                    <!-- <a href="#" class="code-link" style="cursor: not-allowed;">💻 Code (coming soon)</a> -->
-                                </div>
-                               
-
-                                
-                            </div>
-
-
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">
-                                        CausalGeD: Blending Causality and Diffusion for Spatial Gene Expression Generation
-                                    </div>
-                                    <span class="date-badge">May 2025</span>
-                                </div>
-
-                                <div class="news-info-row">
-                                    <p class="accepted-text"> KDD 2025! (Acceptance rate &lt; 19%)</p>
-                                    <div class="news-facts-wrapper">
-                                        <div class="news-facts">
-                                            <span class="fact-item">Novel blending of diffusion and AR in Spatial Transcriptomics.</span>
-                                            <span class="fact-item">Long-range dependencies in gene expression.</span>
-                                            <span class="fact-item">Achieves SOTA results on 10 datasets.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="news-links">
-                                    <a href="https://dl.acm.org/doi/10.1145/3711896.3736875" target="_blank" class="pdf-link">📄Paper</a>
-                                    <a href="https://dl.acm.org/doi/suppl/10.1145/3711896.3736875/suppl_file/rtfb1253-video.mp4" target="_blank" class="code-link">▶️Video</a>
-                                    <a href="#" class="code-link" style="cursor: not-allowed;">💻 Code (coming soon)</a>
-                                </div>
-                            </div>
-
-
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">
-                                        TSCMamba: Mamba meets multi-view learning for time series classification
-                                    </div>
-                                    <span class="date-badge">March 2025</span>
-                                </div>
-
-                                <div class="news-info-row">
-                                    <p class="accepted-text"> Accepted at Information Fusion! (Impact Factor 14+)</p>
-                                    <div class="news-facts-wrapper">
-                                        <div class="news-facts">
-                                            <span class="fact-item">Robust time-series classification using multi-view learning.</span>
-                                            <span class="fact-item">Temporal and spectral features for shift-equivariance.</span>
-                                            <span class="fact-item">Superior accuracy and efficiency over 30 benchmark datasets.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="news-links">
-                                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S1566253525001526"
-                                        target="_blank" class="pdf-link">📄 Paper</a>
-                                    <a href="https://github.com/Atik-Ahamed/TSCMamba" class="code-link" target="_blank">💻 Code</a>
-
-                                </div>
-                            </div>
-
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">
-                                        Mol-CADiff: Causality-Aware Autoregressive Diffusion for Molecule Generation
-                                    </div>
-                                    <span class="date-badge">March 2025</span>
-                                </div>
-
-                                <div class="news-info-row">
-                                    <p class="accepted-text"> Preprint available at arXiv</p>
-                                   
-                                </div>
-
-                                <div class="news-links">
-                                    <a href="https://arxiv.org/abs/2503.05499" target="_blank" class="pdf-link">📄 Paper</a>
-                                    <a href="#" class="code-link" style="cursor: not-allowed;">💻 Code (coming soon)</a>
-
-                                </div>
-                            </div>
-
-
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">
-                                        GraphMinNet: Learning Dependencies in Graphs with Light Complexity Minimal Architecture
-                                    </div>
-                                    <span class="date-badge">February 2025</span>
-                                </div>
-
-                                <div class="news-info-row">
-                                    <p class="accepted-text"> Preprint available at arXiv</p>
-                                
-                                </div>
-
-                                <div class="news-links">
-                                    <a href="https://arxiv.org/abs/2502.00282" target="_blank" class="pdf-link">📄 Paper</a>
-                                    <a href="#" class="code-link" style="cursor: not-allowed;">💻 Code (coming soon)</a>
-
-                                </div>
-                            </div>
-
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">
-                                        Low-dose computed tomography perceptual image quality assessment
-                                    </div>
-                                    <span class="date-badge">January 2025</span>
-                                </div>
-
-                                <div class="news-info-row">
-                                    <p class="accepted-text"> Accepted at Medical Image Analysis! (Impact Factor 10+)</p>
-                                    <div class="news-facts-wrapper">
-                                        <div class="news-facts">
-                                            <span class="fact-item">First low-dose CT IQA challenge.</span>
-                                            <span class="fact-item">First open-source low-dose CT IQA dataset.</span>
-                                            <span class="fact-item">Potential of no-reference IQA methods.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="news-links">
-                                    <a href="https://www.sciencedirect.com/science/article/pii/S1361841524002688" target="_blank" class="pdf-link">📄 Paper</a>
-                                    <a href="https://github.com/Ewha-AI/LDCTIQAC2023" class="code-link" target="_blank">💻 Code</a>
-
-                                </div>
-                            </div>
-
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">
-                                        Timemachine: A time series is worth 4 mambas for long-term forecasting
-                                    </div>
-                                    <span class="date-badge">July 2024</span>
-                                </div>
-
-                                <div class="news-info-row">
-                                    <p class="accepted-text"> Accepted at 27th ECAI (Acceptance rate &lt; 24%)</p>
-                                    <div class="news-facts-wrapper">
-                                        <div class="news-facts">
-                                            <span class="fact-item">Unifies channel-mixing and channel-independence.</span>
-                                            <span class="fact-item">Superior performance in prediction accuracy.</span>
-                                            <span class="fact-item">Small memory frootprint.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="news-links">
-                                    <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA240677" target="_blank" class="pdf-link">📄 Paper</a>
-                                    <a href="https://github.com/Atik-Ahamed/TimeMachine" class="code-link" target="_blank">💻 Code</a>
-
-                                </div>
-                            </div>
-
-
-                            <div class="news-card">
-                                <div class="news-header">
-                                    <div class="news-title">
-                                        MambaTab: A Plug-and-Play Model for Learning Tabular Data
-                                    </div>
-                                    <span class="date-badge">May 2024</span>
-                                </div>
-
-                                <div class="news-info-row">
-                                    <p class="accepted-text"> Accepted at 7th IEEE MIPR (Acceptance rate &lt; 20%)</p>
-                                    <div class="news-facts-wrapper">
-                                        <div class="news-facts">
-                                            <span class="fact-item">Extremely small model size.</span>
-                                            <span class="fact-item">Linear scalability.</span>
-                                            <span class="fact-item">Effective end-to-end training and inference.</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="news-links">
-                                    <a href="https://ieeexplore.ieee.org/abstract/document/10707914" target="_blank" class="pdf-link">📄 Paper</a>
-                                    <a href="https://github.com/Atik-Ahamed/MambaTab" class="code-link" target="_blank">💻 Code</a>
-
-                                </div>
-                            </div>
-
-
-
-                           
-
-
-
-                    </section>
-                    <!-- End of About Me Subpage -->
-
-
-
-
-
-
-                    <!-- Contact Subpage -->
-                    <section class="pt-page pt-page-2" data-id="contact">
-                        <div class="section-title-block">
-                            <h2 class="section-title">Contact</h2>
-                            <h5 class="section-description">Get in Touch</h5>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-6 col-md-6 subpage-block">
-                                <div class="block-title">
-                                    <h3>Get in Touch</h3>
-                                </div>
-                                <p>Kindly drop me a text with the following email (<i>remove *</i>) </p>
-                                <div class="contact-info-block">
-                                    <div class="ci-icon">
-                                        <i class="pe-7s-icon pe-7s-map-marker"></i>
-                                    </div>
-                                    <div class="ci-text">
-                                        <h5>Lexington, KY, USA</h5>
-                                    </div>
-                                </div>
-                                <div class="contact-info-block">
-                                    <div class="ci-icon">
-                                        <i class="pe-7s-icon pe-7s-mail"></i>
-                                    </div>
-                                    <!-- <div class="ci-text">
-                                <h5>Personal: <a href="" class="" data-cfemail="">[atikahamedutso@gmail.com]</a>
-                                </h5>
-                            </div> -->
-                                    <div class="ci-text">
-                                        <h5>atik*ahamed*[at]uky.edu</h5>
-                                    </div>
-                                    <!-- <div class="ci-text">
-                                <h5>GUB: <a href="" class="" data-cfemail="">[atikahamed@cse.green.edu.bd]</a>
-                                </h5>
-                            </div> -->
-                                </div>
-                                <!-- <div class="contact-info-block">
-                            <div class="ci-icon">
-                                <i class="pe-7s-icon pe-7s-call"></i>
-                            </div>
-                            
-                        </div> -->
-
-                            </div>
-
-
-                        </div>
-                        <a href="https://clustrmaps.com/site/1bl15" title="Visit tracker"><img
-                                src="//www.clustrmaps.com/map_v2.png?d=TqUosqDwvyRU6-XtchN4Y54ptZzon13st_kvLBfSsl0&cl=ffffff" /></a>
-                    </section>
-                    <!-- End Contact Subpage -->
-
+    </header>
+
+    <main>
+        <!-- About Section (Combined Hero & Bio) -->
+        <section class="about-section" id="about">
+            <div class="about-left">
+                <img src="images/photo_small.jpg" alt="Md Atik Ahamed" class="profile-img">
+                <h1>Md Atik Ahamed</h1>
+                <h2>PhD, Computer Science, UKY</h2>
+                <div class="social-icons">
+                    <!-- Google Scholar -->
+                    <a href="https://scholar.google.com/citations?user=L9epoWcAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                        <svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/Atik-Ahamed" target="_blank" title="GitHub">
+                        <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/md-atik-ahamed-264401162/" target="_blank" title="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
                 </div>
             </div>
-            <!-- /Page changer wrapper -->
-        </div>
-        <!-- /Main Content -->
-    </div>
+            
+            <div class="about-right">
+                <h2 class="section-title">About Me</h2>
+                <p class="bio-paragraph">
+                    I completed my PhD in Computer Science at the <a target="_blank" href="https://www.uky.edu">University of Kentucky</a>. My research lies at the forefront of deep learning, multimodal learning, and real-world data challenges to build highly effective AI solutions. During my PhD, I interned at <span style="font-weight:600;"><span style="color:#4285F4;">G</span><span style="color:#EA4335;">o</span><span style="color:#FBBC05;">o</span><span style="color:#4285F4;">g</span><span style="color:#34A853;">l</span><span style="color:#EA4335;">e</span></span> (&approx;9 months), leading the development of multi-agent systems and foundational architectures like <a target="_blank" href="https://tfrbench.github.io">TFRBench (ICML 2026)</a> and <a target="_blank" href="https://arxiv.org/abs/2605.08625">STRIDE</a>. I was also selected for the exclusive <a href="https://www.linkedin.com/posts/2025-phd-forum-meta-careers-ugcPost-7401485466220576769-qCDf/" target="_blank" style="font-weight:600; color:#0668E1; text-decoration:none;">Meta</a> PhD Forum.
+                </p>
+                <p class="bio-paragraph">
+                    My research has achieved broad impact across both industry and academia. I regularly publish in top-tier AI conferences (such as <strong>ICML, AAAI, KDD, ECAI</strong>) and high-impact journals (such as <strong>Nature Communications, Information Fusion, Medical Image Analysis</strong>).
+                </p>
+                <p class="bio-paragraph">
+                    Previously, I earned my BSc from <a href="https://www.ruet.ac.bd/" target="_blank">RUET</a> and lectured at Green University of Bangladesh. As a Kaggle Competition Expert, I also enjoy solving practical ML problems. I’m always interested in new ideas and exciting collaborations!
+                </p>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news">
+            <h2 class="section-title">Recent News</h2>
+            <div class="news-grid">
+                
+                <!-- Item 1 -->
+                <div class="news-card fade-in">
+                    <div class="news-header">
+                        <div class="news-title">Paper Regarding Molecule Generation accepted to Nature Communications!</div>
+                        <span class="date-badge">June 2026</span>
+                    </div>
+                    <div class="news-meta">
+                        <span class="news-facts" data-facts='["Details coming soon."]'>Details coming soon.</span>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="news-card fade-in">
+                    <div class="news-header">
+                        <div class="news-title">Reasoning-Aware Training for Time Series Forecasting</div>
+                        <span class="date-badge">May 2026</span>
+                    </div>
+                    <div class="news-meta">
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span class="accepted-text">Preprint released</span>
+                            <span class="accepted-text" style="background: #f1f3f4; color: #202124;">@<span style="font-weight:600;"><span style="color:#4285F4;">G</span><span style="color:#EA4335;">o</span><span style="color:#FBBC05;">o</span><span style="color:#4285F4;">g</span><span style="color:#34A853;">l</span><span style="color:#EA4335;">e</span></span> Internship</span>
+                        </div>
+                        <span class="news-facts" data-facts='["Novel framework integrating LLM reasoning natively into the embedding space.", "Achieves state-of-the-art performance on GIFT-Eval and TFRBench.", "Capable of forecasting and providing reasoning."]'>Novel framework integrating LLM reasoning natively into the continuous embedding space.</span>
+                    </div>
+                    <div class="news-links">
+                        <a href="https://arxiv.org/abs/2605.08625" target="_blank" class="pdf-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> arXiv</a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="news-card fade-in">
+                    <div class="news-header">
+                        <div class="news-title">TFRBench: A Reasoning Benchmark for Evaluating Forecasting Systems</div>
+                        <span class="date-badge">April 2026</span>
+                    </div>
+                    <div class="news-meta">
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <span class="accepted-text">ICML 2026!</span>
+                            <span class="accepted-text" style="background: #f1f3f4; color: #202124;">@<span style="font-weight:600;"><span style="color:#4285F4;">G</span><span style="color:#EA4335;">o</span><span style="color:#FBBC05;">o</span><span style="color:#4285F4;">g</span><span style="color:#34A853;">l</span><span style="color:#EA4335;">e</span></span> Internship</span>
+                        </div>
+                        <span class="news-facts" data-facts='["1st reasoning benchmark for time-series forecasting.", "Performance improved from 40.2% → 56.6%."]'>1st reasoning benchmark for time-series forecasting.</span>
+                    </div>
+                    <div class="news-links">
+                        <a href="https://icml.cc/virtual/2026/poster/66488" target="_blank" class="pdf-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Paper</a>
+                        <a href="https://tfrbench.github.io" target="_blank" class="pdf-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> Website</a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="news-card fade-in">
+                    <div class="news-header">
+                        <div class="news-title">RefiDiff: Progressive Refinement Diffusion for Efficient Missing Data Imputation</div>
+                        <span class="date-badge">Nov 2025</span>
+                    </div>
+                    <div class="news-meta">
+                        <span class="accepted-text">AAAI 2026! (Acceptance rate for year 2026 &lt; 18%)</span>
+                        <span class="news-facts" data-facts='["Unifies predictive and generative paradigms for robust and flexible imputation.", "Novel Mamba-based denoising model.", "Achieves state-of-the-art performance."]'>Unifies predictive and generative paradigms for robust and flexible imputation.</span>
+                    </div>
+                    <div class="news-links">
+                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/39034" target="_blank" class="pdf-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Paper</a>
+                        <a href="https://github.com/Atik-Ahamed/RefiDiff" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Code</a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="news-card fade-in">
+                    <div class="news-header">
+                        <div class="news-title">Selected to participate in the Meta PhD Forum, 2025</div>
+                        <span class="date-badge">Oct 2025</span>
+                    </div>
+                    <div class="news-meta">
+                        <span class="accepted-text">(sponsored by Meta)</span>
+                    </div>
+                    <div class="news-links">
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7390221227384254464/" target="_blank" class="pdf-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Post</a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="news-card fade-in">
+                    <div class="news-header">
+                        <div class="news-title">CausalGeD: Blending Causality and Diffusion for Spatial Gene Expression Generation</div>
+                        <span class="date-badge">May 2025</span>
+                    </div>
+                    <div class="news-meta">
+                        <span class="accepted-text">KDD 2025! (Acceptance rate &lt; 19%)</span>
+                        <span class="news-facts" data-facts='["Novel blending of diffusion and AR in Spatial Transcriptomics.", "Achieves SOTA results on 10 datasets."]'>Novel blending of diffusion and AR in Spatial Transcriptomics.</span>
+                    </div>
+                    <div class="news-links">
+                        <a href="https://dl.acm.org/doi/10.1145/3711896.3736875" target="_blank" class="pdf-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Paper</a>
+                        <a href="https://dl.acm.org/doi/suppl/10.1145/3711896.3736875/suppl_file/rtfb1253-video.mp4" target="_blank" class="video-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> Video</a>
+                        <a href="#" style="pointer-events: none; opacity: 0.6;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Code (coming soon)</a>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="news-card fade-in">
+                    <div class="news-header">
+                        <div class="news-title">TSCMamba: Mamba meets multi-view learning for time series classification</div>
+                        <span class="date-badge">March 2025</span>
+                    </div>
+                    <div class="news-meta">
+                        <span class="accepted-text">Accepted at Information Fusion! (Impact Factor 14+)</span>
+                        <span class="news-facts" data-facts='["Robust time-series classification using multi-view learning.", "Temporal and spectral features."]'>Robust time-series classification using multi-view learning.</span>
+                    </div>
+                    <div class="news-links">
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S1566253525001526" target="_blank" class="pdf-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Paper</a>
+                        <a href="https://github.com/Atik-Ahamed/TSCMamba" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Code</a>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="news-card fade-in">
+                    <div class="news-header">
+                        <div class="news-title">Low-dose computed tomography perceptual image quality assessment</div>
+                        <span class="date-badge">January 2025</span>
+                    </div>
+                    <div class="news-meta">
+                        <span class="accepted-text">Accepted at Medical Image Analysis! (Impact Factor 10+)</span>
+                        <span class="news-facts" data-facts='["First low-dose CT IQA challenge.", "First open-source low-dose CT IQA dataset."]'>First low-dose CT IQA challenge.</span>
+                    </div>
+                    <div class="news-links">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S1361841524002688" target="_blank" class="pdf-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Paper</a>
+                        <a href="https://github.com/Ewha-AI/LDCTIQAC2023" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Code</a>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="news-card fade-in">
+                    <div class="news-header">
+                        <div class="news-title">Timemachine: A time series is worth 4 mambas for long-term forecasting</div>
+                        <span class="date-badge">July 2024</span>
+                    </div>
+                    <div class="news-meta">
+                        <span class="accepted-text">Accepted at 27th ECAI (Acceptance rate &lt; 24%)</span>
+                        <span class="news-facts" data-facts='["Unifies channel-mixing and channel-independence.", "Small memory footprint."]'>Unifies channel-mixing and channel-independence.</span>
+                    </div>
+                    <div class="news-links">
+                        <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA240677" target="_blank" class="pdf-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Paper</a>
+                        <a href="https://github.com/Atik-Ahamed/TimeMachine" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Code</a>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="news-card fade-in">
+                    <div class="news-header">
+                        <div class="news-title">MambaTab: A Plug-and-Play Model for Learning Tabular Data</div>
+                        <span class="date-badge">May 2024</span>
+                    </div>
+                    <div class="news-meta">
+                        <span class="accepted-text">Accepted at 7th IEEE MIPR (Acceptance rate &lt; 20%)</span>
+                        <span class="news-facts" data-facts='["Extremely small model size.", "Linear scalability.", "Effective end-to-end training and inference."]'>Extremely small model size.</span>
+                    </div>
+                    <div class="news-links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10707914" target="_blank" class="pdf-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Paper</a>
+                        <a href="https://github.com/Atik-Ahamed/MambaTab" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: text-bottom;"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Code</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-container">
+                <div class="contact-text-wrap">
+                    <p style="font-size: 1.1rem; margin-bottom: 1rem;">Feel free to reach out using the following email (remove *):</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <span>Lexington, KY, USA</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <span>atik*ahamed*utso*[at]gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fade-in animation on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
 
-    <script src="bootstrap-5.1.1-dist/js/bootstrap.min.js"></script>
-    <script src="js/page-transition.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/validator.js"></script>
-    <script src="js/jquery.shuffle.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.hoverdir.js"></script>
-    <script src="js/main.js"></script>
+            document.querySelectorAll('.fade-in').forEach((card, index) => {
+                card.style.transitionDelay = `${(index % 5) * 0.1}s`;
+                observer.observe(card);
+            });
 
-    <!-- Demo Color changer Script -->
-    <script src="preview/lmpixels-demo-panel.js"></script>
-    <!-- /Demo Color changer Script -->
+            // Facts text rotator
+            const factElements = document.querySelectorAll('.news-facts[data-facts]');
+            factElements.forEach(el => {
+                try {
+                    const facts = JSON.parse(el.getAttribute('data-facts'));
+                    if (facts.length > 1) {
+                        let currentIndex = 0;
+                        setInterval(() => {
+                            // Fade out
+                            el.style.opacity = '0';
+                            setTimeout(() => {
+                                // Update text and fade in
+                                currentIndex = (currentIndex + 1) % facts.length;
+                                el.textContent = facts[currentIndex];
+                                el.style.opacity = '1';
+                            }, 500); // Wait for fade out to complete (matching CSS transition)
+                        }, 4000); // Change text every 4 seconds
+                    }
+                } catch (e) {
+                    console.error("Error parsing facts", e);
+                }
+            });
+        });
+    </script>
 </body>
-
-
-
 </html>
