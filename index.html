@@ -10,6 +10,11 @@
 <body>
     <header>
         <div class="nav-container">
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#news">News</a></li>
@@ -48,7 +53,7 @@
                     I completed my PhD in Computer Science at the <a target="_blank" href="https://www.uky.edu">University of Kentucky</a>. My research lies at the forefront of deep learning, multimodal learning, and real-world data challenges to build highly effective AI solutions. During my PhD, I interned at <span style="font-weight:600;"><span style="color:#4285F4;">G</span><span style="color:#EA4335;">o</span><span style="color:#FBBC05;">o</span><span style="color:#4285F4;">g</span><span style="color:#34A853;">l</span><span style="color:#EA4335;">e</span></span> (&approx;9 months), leading the development of multi-agent systems and foundational architectures like <a target="_blank" href="https://tfrbench.github.io">TFRBench (ICML 2026)</a> and <a target="_blank" href="https://arxiv.org/abs/2605.08625">STRIDE</a>. I was also selected for the exclusive <a href="https://www.linkedin.com/posts/2025-phd-forum-meta-careers-ugcPost-7401485466220576769-qCDf/" target="_blank" style="font-weight:600; color:#0668E1; text-decoration:none;">Meta</a> PhD Forum.
                 </p>
                 <p class="bio-paragraph">
-                    My research has achieved broad impact across both industry and academia. I regularly publish in top-tier AI conferences (such as <strong>ICML, AAAI, KDD, ECAI</strong>) and high-impact journals (such as <strong>Nature Communications, Information Fusion, Medical Image Analysis</strong>).
+                    My research has achieved broad impact across both industry and academia, leading to publications in venues such as <strong>ICML, AAAI, KDD, ECAI, Nature Communications, Information Fusion, Journal of Biomedical Informatics, and Medical Image Analysis</strong>.
                 </p>
                 <p class="bio-paragraph">
                     Previously, I earned my BSc from <a href="https://www.ruet.ac.bd/" target="_blank">RUET</a> and lectured at Green University of Bangladesh. As a Kaggle Competition Expert, I also enjoy solving practical ML problems. I’m always interested in new ideas and exciting collaborations!
@@ -248,6 +253,27 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Hamburger menu toggle
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    if (mobileMenu) {
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+            });
+
             // Fade-in animation on scroll
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
